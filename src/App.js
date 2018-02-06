@@ -20,7 +20,7 @@ class App extends Component {
               <li className="heading-nav-entry"><NavLink exact to="/todos" activeClassName="active" activeStyle={{ padding: '5px', backgroundColor: 'lightgrey', borderRadius: '5px'}}>Todos</NavLink></li>
             </ul>
             <Route exact path="/" component={Home} />
-            <Route exact path="/users" component={Users} />
+            <Route path="/users" component={Users} />
             <Route exact path="/users/:id" component={UserDetail} />
             <Route path="/todos" component={Todos} />
           </div>
@@ -74,11 +74,27 @@ class Users extends Component {
 const UserDetail = (props) => {
       console.log(props)
   return (
-      <div>
-        <ul>
-          <li>User Detail for {props.match.params.id}</li>
-        </ul>
-      </div>)
+    <div className="small-10 columns" >
+      <div className="card">
+        <h1>User Detail for {props.match.params.id}</h1>
+        {props.match.params.id == 1 &&
+          <h3>Now is the time for all good men to come to the aid of their country to defend its people and treasure against all comers, great and small, internal and external, in plain sight and covert.</h3>
+        }
+        {props.match.params.id == 2 &&
+          <h3>What we really are matters more than what other people think of us. Jawaharlal Nehru
+Read more at: https://www.brainyquote.com/quotes/jawaharlal_nehru_163872.</h3>
+        }
+        {props.match.params.id == 3 &&
+          <h3>I didn't attend the funeral, but I sent a nice letter saying I approved of it. Mark Twain
+Read more at: https://www.brainyquote.com/quotes/mark_twain_100376</h3>
+        }
+        {props.match.params.id == 4 &&
+          <h3>Love is a better teacher than duty. Albert Einstein
+Read more at: https://www.brainyquote.com/quotes/albert_einstein_148793.</h3>
+        }
+
+      </div >
+    </div>)
 }
 
 class Todos extends Component {
