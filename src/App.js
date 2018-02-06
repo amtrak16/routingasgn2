@@ -61,10 +61,10 @@ class Users extends Component {
     return (
       <div>
         <ul class="tabs vertical">
-          <li className="tab-title"><NavLink exact to="/users/1" activeClassName="active" activeStyle={{ padding: '5px', backgroundColor: 'lightgrey', borderRadius: '5px' }}>User 1</NavLink></li>
-          <li className="tab-title"><NavLink exact to="/users/2" activeClassName="active" activeStyle={{ padding: '5px', backgroundColor: 'lightgrey', borderRadius: '5px' }}>User 2</NavLink></li>
-          <li className="tab-title"><NavLink exact to="/users/3" activeClassName="active" activeStyle={{ padding: '5px', backgroundColor: 'lightgrey', borderRadius: '5px' }}>User 3</NavLink></li>
-          <li className="tab-title"><NavLink exact to="/users/4" activeClassName="active" activeStyle={{ padding: '5px', backgroundColor: 'lightgrey', borderRadius: '5px' }}>User 4</NavLink></li>
+          <li className="tab-title small-1 columns"><NavLink exact to="/users/1" activeClassName="active" activeStyle={{ padding: '5px', backgroundColor: 'lightgrey', borderRadius: '5px' }}>User 1</NavLink></li>
+          <li className="tab-title small-1 columns"><NavLink exact to="/users/2" activeClassName="active" activeStyle={{ padding: '5px', backgroundColor: 'lightgrey', borderRadius: '5px' }}>User 2</NavLink></li>
+          <li className="tab-title small-1 columns"><NavLink exact to="/users/3" activeClassName="active" activeStyle={{ padding: '5px', backgroundColor: 'lightgrey', borderRadius: '5px' }}>User 3</NavLink></li>
+          <li className="tab-title small-1 columns"><NavLink exact to="/users/4" activeClassName="active" activeStyle={{ padding: '5px', backgroundColor: 'lightgrey', borderRadius: '5px' }}>User 4</NavLink></li>
         </ul>
       </div>
     )
@@ -76,7 +76,7 @@ const UserDetail = (props) => {
   return (
     <div className="small-10 columns" >
       <div className="card">
-        <h1>User Detail for {props.match.params.id}</h1>
+        <h1>User {props.match.params.id}</h1>
         {props.match.params.id == 1 &&
           <h3>Now is the time for all good men to come to the aid of their country to defend its people and treasure against all comers, great and small, internal and external, in plain sight and covert.</h3>
         }
